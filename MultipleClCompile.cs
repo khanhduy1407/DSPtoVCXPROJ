@@ -12,7 +12,8 @@ class MultipleClCompile
 		set
 		{
 			foreach (var obj in this.Objects)
-				obj.ExcludedFromBuild = value;
+				if (obj != null)
+					obj.ExcludedFromBuild = value;
 		}
 	}
 
